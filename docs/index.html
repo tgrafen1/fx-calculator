@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fx Calculator PWA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--asych bedeutet das erst das JS geladen wird wenn der DOM steht-->
+    <script src="app.js" async></script>
+
+</head>
+<body>
+
+    <main>
+        <h1>Fx Calculator</h1>
+        <section>
+            <input type="number" name="input-value">
+            <select name="input-currency"></select>
+        </section>
+        <section>
+            <input name="output-value" readonly>
+            <select name="output-currency"></select>
+        </section>
+        <button>
+            Calculate
+        </button>
+    </main>
+
+</body>
+</html>
