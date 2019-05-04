@@ -47,3 +47,9 @@ function convert(inputValue, inputCurrency, outputCurrency) {
 
 
 }
+
+if('serviceWorker')
+{
+    navigator.serviceWorker.register('sw.js')
+        .catch(console.error);
+}
