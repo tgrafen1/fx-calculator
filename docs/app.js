@@ -1,4 +1,4 @@
-const url = 'https://tgrafen1.github.io/fx-calculator/rates.json'
+const url = 'rates.json';
 
 document.querySelectorAll('select').forEach(element => {
     element.innerHTML = `
@@ -28,12 +28,12 @@ function convert(inputValue, inputCurrency, outputCurrency) {
 
         fetch(url).then(response => {
             if (response.status == 200) {
-                return response.json().rates;
+                return response.json();
             } else {
                 return Promise.reject('Failed to download rates');
             }
-        }).then((rates) => {
-
+        }).then((data) => {
+            let rates = data['rates'];
             rates["EUR"] = 1;
 
             if (inputCurrency != "EUR") {
